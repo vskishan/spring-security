@@ -1,4 +1,4 @@
-package com.example.mfa.service;
+package com.example.mfa.sms.service;
 
 import com.twilio.Twilio;
 import com.twilio.rest.api.v2010.account.Message;
