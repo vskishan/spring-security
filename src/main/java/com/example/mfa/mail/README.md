@@ -16,4 +16,9 @@ The above design decisions are made to make the implementation simple.
 
 <i>Third party integrations :</i> Google SMTP server
 
+<b>Attachments</b> <br>
+![image](https://github.com/vskishan/spring-security/assets/103843547/5dca2b4d-485e-4739-8d78-37a953c42ddd)
+
+
+
 
