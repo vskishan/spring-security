@@ -1,7 +1,7 @@
-package com.example.mfa.mail.controller;
+package mfa.sms.controller;
 
-import com.example.mfa.mail.service.EmailService;
-import com.example.mfa.mail.service.EmailCodeAuthenticatorService;
+import com.mfa.sms.service.MessageService;
+import com.mfa.sms.service.SMSCodeAuthenticatorService;
 import java.util.Random;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -9,26 +9,26 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class HelloWorldControllerForMailUser {
+public class HelloWorldControllerForSMSUser {
 
   @Autowired
-  EmailService messageService;
+  MessageService messageService;
 
   @Autowired
-  EmailCodeAuthenticatorService authenticatorService;
+  SMSCodeAuthenticatorService authenticatorService;
 
   public String code;
 
-  @GetMapping("/send-mail-code")
-  public void sendMailCode(){
+  @GetMapping("/send-sms-code")
+  public void sendSMSCode(){
     Random rand = new Random();
     code = Integer.toString(rand.nextInt(100000));
-    messageService.sendEmailCode(code);
+    messageService.sendMessage(code);
   }
 
-  @GetMapping("/get-detail-using-mail")
+  @GetMapping("/get-details-using-sms")
   public String printHelloWorldForSMSUser(@RequestParam(name = "code", required = false) String givenCode){
-    authenticatorService.authenticateEmailCode(code, givenCode);
+    authenticatorService.authenticateSMSCode(code, givenCode);
     return "Hello World!";
   }
 

@@ -1,4 +1,4 @@
-package com.example.mfa.mail.service;
+package mfa.mail.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;

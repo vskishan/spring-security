@@ -1,4 +1,4 @@
-package com.example.mfa.mail.service;
+package mfa.mail.service;
 
 import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.stereotype.Service;

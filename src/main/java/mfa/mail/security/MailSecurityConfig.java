@@ -1,4 +1,4 @@
-package com.example.mfa.sms.security;
+package mfa.mail.security;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -7,10 +7,10 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 
 @Configuration
-public class SMSSecurityConfig {
+public class MailSecurityConfig {
 
   @Bean
-  public InMemoryUserDetailsManager smsUserDetailsManager(){
+  public InMemoryUserDetailsManager mailUserDetailsManager(){
     UserDetails user = User.withDefaultPasswordEncoder()
                           .username("Kishan")
                           .password("password")
